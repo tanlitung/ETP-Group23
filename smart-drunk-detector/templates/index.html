@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ETP 23</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="../static/css/main7.css" rel="stylesheet">      
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ETP 23 Smart Drunk Detection</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+            <div class="container">
+                <div id="image_classifier" class="col-xl-6" style="float:left;">
+                    <h2>Image Classifier</h2>
+                    <form id="upload-file" method="post" enctype="multipart/form-data">
+                        <label for="imageUpload" class="upload-label">
+                            Choose...
+                        </label>
+                        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                    </form>
+                
+                    <div class="image-section" style="display:none;">
+                        <div class="img-preview">
+                            <div id="imagePreview">
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="loader" style="display:none;"></div>
+                    <h6 id="face-result">
+                        <span> </span>
+                    </h6>
+                
+                    
+                </div>
+                
+                <div id="NDIR" class="col-xl-6" style="float:right;">
+                    <h2>NDIR Sensor</h2>
+                    <form id="input-ndir" method="post" enctype="multipart/form-data">
+                        <input type="text" name="ndir" id="ndir">
+                    </form>
+                    
+                    <br>
+                    <br>
+                    <div>
+                        <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Submit!</button>
+                    </div>
+                    <h6 id="ndir-result">
+                        <span> </span>
+                    </h6>
+                </div>
+            </div>
+            
+            <div class="final-result" style="content: ''; clear: both; text-align: center; display: block;">
+                <h3 id="final-result">
+                    <span> </span>
+                </h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <script src="../static/js/func5.js"></script> 
+</footer>
+
+</html>
+
